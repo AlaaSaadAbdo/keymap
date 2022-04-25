@@ -1,0 +1,114 @@
+layout:
+    split: true
+    rows: 3
+    columns: 5
+    thumbs: 2
+layers:
+    DEF:
+        left:
+            - [Q, W, F, P, B]
+            - [A, R, S, T, G]
+            - [Z, X, C, D, V]
+        right:
+            - [J, L, U, Y, "'"]
+            - [M, N, E, I, O]
+            - [K, H, ",", ., /]
+        left_thumbs: &left_thumbs
+            - tap: SYM
+            - tap: Space
+        right_thumbs: &right_thumbs
+            - tap: Shift
+            - tap: NAV
+        combos: &combos
+            - positions: [1, 11]
+              key: "{"
+            - positions: [8, 18]
+              key: "}"
+            - positions: [2, 12]
+              key: "["
+            - positions: [7, 17]
+              key: "]"
+            - positions: [3, 13]
+              key: "("
+            - positions: [6, 16]
+              key: ")"
+            - positions: [20, 21]
+              key: "⤺"
+            - positions: [21, 22]
+              key: "cp"
+            - positions: [21, 23]
+              key: "✂"
+            - positions: [21, 22, 23]
+              key: "Paste"
+    CLM:
+        left:
+            - [Q, W, F, P, B]
+            - [{hold: Ctrl, tap: A}, {hold: Gui, tap: R}, {hold: Alt, tap: S}, {hold: Shift, tap: T}, G]
+            - [Z, X, C, D, V]
+        right:
+            - [J, L, U, Y, "'"]
+            - [M, {hold: Shift, tap: N}, {hold: Alt, tap: E}, {hold: Gui, tap: I}, {hold: Ctrl, tap: O}]
+            - [K, H, ",", ., /]
+        left_thumbs: *left_thumbs
+        right_thumbs: *right_thumbs
+        combos: *combos
+    GME:
+        left:
+            - [Tab, Q, W, E, R]
+            - [Esc, A, S, D, F]
+            - [Shift, Z, X, C, V]
+        right:
+            - [Y, U, I, O, P]
+            - [H, J, K, L, "off"]
+            - [N, M, ",", ., /]
+        left_thumbs:
+            - Ctrl
+            - Space
+        right_thumbs:
+            - Alt
+            - Enter
+    SYM:
+        left:
+            - ["!", "@", "#", "$", "%"]
+            - ["+", "=", "_", "-", "^"]
+            - ["", "¿", "\\", "*", "&"]
+        right:
+            - ["\\", "7", "8", "9", ","]
+            - ["0", "4", "5", "6", "."]
+            - [";", "1", "2", "3", "/"]
+        left_thumbs:
+            - Space
+            - FUN
+        right_thumbs:
+            - {tap: "", type: held}
+            - Shift
+    NAV:
+        left:
+            - ["Win Close", "Tab Prev", "Tab Next", "Tab Close", "Vol Up"]
+            - [Ctrl, Gui, Alt, {hold: Shift, tap: Tab}, "Vol Down"]
+            - ["", "Win Prev", "Win Next", "Paste", "Play Pause"]
+        right:
+            - [Home, "Page Down", "Page Up", End, ""]
+            - [Left, Down, Up, Right, Calc]
+            - [Insert, Delete, Prev, Next, ""]
+        left_thumbs:
+            - Ctrl
+            - {tap: "", type: held}
+        right_thumbs:
+            - FUN
+            - Shift
+    FUN:
+        left:
+            - [F1, F2, F3, F4, F5]
+            - [F6, F7, F8, F9, F10]
+            - ["", "Desk Prev", "Desk Next", F11, F12]
+        right:
+            - ["Caps Lock", "", DEF, CLM, GME]
+            - [BT1, BT2, BT3, BT4, BT5]
+            - ["Out USB", "Out BLE", "Print Scrn", "Pause Break", "BT CLR"]
+        left_thumbs:
+            - Reset
+            - {tap: "", type: held}
+        right_thumbs:
+            - {tap: "", type: held}
+            - Reset
