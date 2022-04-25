@@ -25,7 +25,7 @@ jobs:
       - name: Render Keymap
         run: |
           mkdir svg
-          python draw.py keymaps/3x5+2.yaml >svg/3x5+2.svg
+          python draw.py keymaps/3x5+2.yaml > svg/3x5+2.svg
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
