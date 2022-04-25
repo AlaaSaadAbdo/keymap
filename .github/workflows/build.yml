@@ -19,13 +19,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pyyaml pydantic
-      # You can test your matrix by printing the current Python version
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
       - name: Render Keymap
-        run: |
-          mkdir svg
-          python draw.py keymaps/3x5+2.yaml > svg/3x5+2.svg
+        run: python draw.py keymaps/3x5+2.yaml > svg/3x5+2.svg
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
