@@ -20,10 +20,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyyaml pydantic
       - name: Render Keymap
-        run: python draw.py keymaps/3x5+2.yaml > svg/3x5+2.svg
+        run: python draw.py keymaps/main.yaml > svg/main.svg
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
           name: keymap
-          path: svg/3x5+2.svg
-
+          path: svg/main.svg
